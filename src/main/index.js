@@ -20,7 +20,13 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 563,
     useContentSize: true,
-    width: 1000
+    width: 1000,
+    // frame: false,   //要创建无边框窗口
+    webPreferences: {
+      devTools: false //关闭调试工具
+    },
+    transparent: true,  //设置透明
+    alwaysOnTop: true  //窗口是否总是显示在其他窗口之前
   })
 
   mainWindow.loadURL(winURL)
